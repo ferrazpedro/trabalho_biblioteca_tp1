@@ -163,7 +163,7 @@ int entrada_codigo (const char entrada[], int tamanho) {
             }
         }
         
-        if (digitos > tamanho || temp < 0)
+        if (digitos > tamanho && temp < 0)
         {
             printf("\nErro no cadastro. O %s não pode possuir mais do que %d digitos. Tente novamente.\n", entrada, tamanho);
 
@@ -172,7 +172,7 @@ int entrada_codigo (const char entrada[], int tamanho) {
 
         getchar();
 
-    } while (digitos > tamanho || temp < 0);
+    } while (digitos > tamanho && temp < 0);
 
     return temp;
 }
